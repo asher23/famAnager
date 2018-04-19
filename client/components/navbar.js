@@ -3,15 +3,19 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
+import './navbar.css'
 
 const Navbar = ({ handleClick, isLoggedIn }) => (
   <div>
-    <h1>BOILERMAKER</h1>
-    <nav>
+    <nav className='navbar-non navbar'>
+    <a className="navbar-brand" href="#">Fa-Manager</a>
+      {/* <p style={{fontSize: '30px'}} id='nav-header'>Fa-Manager</p> */}
       {isLoggedIn ? (
         <div>
+          
           {/* The navbar will show these links after you log in */}
           <Link to="/home">Home</Link>
+          <Link to="/familyHome">Family</Link>
           <a href="#" onClick={handleClick}>
             Logout
           </a>
@@ -24,7 +28,6 @@ const Navbar = ({ handleClick, isLoggedIn }) => (
         </div>
       )}
     </nav>
-    <hr />
   </div>
 )
 

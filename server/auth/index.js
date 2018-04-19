@@ -41,3 +41,5 @@ router.get('/me', (req, res) => {
 })
 
 router.use('/google', require('./google'))
+router.use('/email', require('./email'))
+// router.use('/stripe', require('./stripe'))

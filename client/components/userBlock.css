@@ -1,0 +1,56 @@
+.block {
+    height: 140px;
+    /* width: 100%; */
+    border: 3px solid white;
+    padding-top: 20px;
+}
+
+
+.little-pic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.block-list {
+    width: 100%;
+}
+
+.your-block {
+    background-color: green;
+    /* height: 300px; */
+    padding-top: 25px;
+}
+
+.big-pic {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    margin: auto;
+}
+
+.add-member-div {
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+
+.center-text {
+    margin: auto;
+}
+.add-member-div:hover {
+    opacity: 0.6
+}
+
+.show-this {
+    height: 200px;
+    transition: all 400ms ease-in-out;
+    background-color: black;
+    color: white;
+}
+
+.hide-this {
+    height: 0px;
+    opacity: 0;
+    transition: all 400ms ease-in-out;
+}

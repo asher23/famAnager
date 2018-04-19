@@ -1,0 +1,21 @@
+.family-home-sidebar {
+    background-color: 50px;
+    height: calc(100vh - 50px);
+    /* max-height: calc(100vh - 50px); */
+    background-color: red;
+    width: 100%;
+    border: 3px solid black;
+    overflow: scroll;
+}
+
+.family-home-main {
+    background-color: #0D19A3;
+    color: white;
+    height: calc(100vh - 50px);
+    /* max-height: calc(100vh - 50px); */
+}
+
+.switch {
+    background-color: yellow;
+
+}

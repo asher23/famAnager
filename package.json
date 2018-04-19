@@ -1,5 +1,5 @@
 {
-  "name": "boilermaker",
+  "name": "familyApp",
   "version": "1.0.0",
   "description": "Some boilerplate code to get you started - get shakin'!",
   "engines": {
@@ -24,17 +24,26 @@
   "dependencies": {
     "axios": "^0.15.3",
     "body-parser": "^1.16.1",
+    "bootstrap": "^4.1.0",
     "compression": "^1.7.1",
     "connect-session-sequelize": "^4.1.0",
+    "css-loader": "^0.28.11",
+    "exports-loader": "^0.7.0",
     "express": "^4.14.1",
     "express-session": "^1.15.1",
+    "fullcalendar": "^3.9.0",
     "history": "^4.6.3",
+    "jquery": "^3.3.1",
     "morgan": "^1.8.1",
+    "no": "0.0.1",
+    "nodemailer": "^4.6.4",
     "passport": "^0.3.2",
     "passport-google-oauth": "^1.0.0",
     "pg": "^6.1.2",
     "pg-hstore": "^2.3.2",
+    "popper.js": "^1.14.3",
     "prop-types": "^15.5.8",
+    "randomstring": "^1.1.5",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.2",
@@ -43,7 +52,8 @@
     "redux-logger": "^2.8.1",
     "redux-thunk": "^2.2.0",
     "sequelize": "^4.3.1",
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.0.3",
+    "style-loader": "^0.20.3"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.40",

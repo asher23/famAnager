@@ -26,6 +26,18 @@ const User = db.define('user', {
   },
   googleId: {
     type: Sequelize.STRING
+  },
+  firstName: {
+    type: Sequelize.STRING
+  },
+  lastName: {
+    type: Sequelize.STRING
+  },
+  money: {
+    type: Sequelize.STRING
+  },
+  role: {
+    type: Sequelize.ENUM('adult', 'child')
   }
 })
 

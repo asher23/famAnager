@@ -1,0 +1,73 @@
+.creating {
+    background-color: #0D19A3;
+    background-size: cover;
+    width: 50%;
+    color: white;
+    height: calc(100vh - 50px);
+    transition: all 300ms ease-in-out;
+    border-right: 6px solid black;
+    text-align: center;
+    max-height: calc(100vh - 50px); 
+    
+}
+body {overflow: hidden}
+
+
+
+
+.joining {
+    background-color: #0D19A3;
+    text-align: center;
+    background-size: cover;
+    color: white;
+    width: 50%;
+    height: calc(100vh - 50px);
+    transition: all 300ms ease-in-out; 
+    border-left: 6px solid black;   
+}
+
+.little:hover { 
+    border: 6px solid white;
+    transition: all 300ms ease-in-out
+}
+
+.full {
+    width: 100%;
+    transition: all 300ms ease-in-out;     
+       
+}
+
+.hide {
+    width: 0%;
+    display: none;
+    background-color: #0D19A3;    
+    transition: all 300ms ease-in-out;    
+}
+
+.fam-for {
+    width: 50%;
+    border: 3px solid black;
+    background-color: #E4C580;
+    color: black;
+    padding: 30px;
+    border-radius: 5%;
+    margin: 60px auto;
+    left: 0;
+    right: 0;
+    /* float: center; */
+    transition: all 600ms ease-in-out
+}
+
+.left {
+    margin-right: 400px;
+    transition: all 600ms ease-in-out    
+}
+
+.right { 
+    margin-right: -400px;
+    transition: all 600ms ease-in-out    
+}
+
+#final-submit {
+    margin-top: 30px;
+}
