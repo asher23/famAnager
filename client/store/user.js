@@ -49,7 +49,14 @@ export const auth = (info, method) =>
 //   dispatch(getUser(res.data))
 //   history.push('/familyHome')
 
-// }
+
+export const updateUser = (updatedInfo, userId) => async (dispatch) => {
+  try {
+    const res = await axios.put(`/api/users/${userId}`, updatedInfo )
+  } catch (err) {
+      console.error(err)
+  }
+}
 export const logout = () =>
   dispatch =>
     axios.post('/auth/logout')

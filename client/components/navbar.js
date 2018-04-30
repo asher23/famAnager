@@ -6,25 +6,43 @@ import {logout} from '../store'
 import './navbar.css'
 
 const Navbar = ({ handleClick, isLoggedIn }) => (
-  <div>
-    <nav className='navbar-non navbar'>
-    <a className="navbar-brand" href="#">Fa-Manager</a>
+  <div className='zee'>
+    <nav className='navbar-non navbar navbar-expand-lg'>
+    <a className="navbar-brand navtags" href="#">Fa-Manager</a>
       {/* <p style={{fontSize: '30px'}} id='nav-header'>Fa-Manager</p> */}
       {isLoggedIn ? (
         <div>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse">
+            <ul className='navbar-nav'>
+              <li className="nav-item ">
+                <a className="nav-link navtags" href="/home">Home</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link navtags" href="/familyHome">Family</a>
+              </li>
+              <li className="nav-item">
+                <a className='nav-link navtags' href="#" onClick={handleClick}>
+                  Logout
+                </a>            
+              </li>
+            </ul>
+          </div>
           
           {/* The navbar will show these links after you log in */}
-          <Link to="/home">Home</Link>
-          <Link to="/familyHome">Family</Link>
-          <a href="#" onClick={handleClick}>
+          {/* <Link className='navtags nav=item' to="/home">Home</Link>
+          <Link className='navtags nav-item' to="/familyHome">Family</Link>
+          <a className='navtags' href="#" onClick={handleClick}>
             Logout
-          </a>
+          </a> */}
         </div>
       ) : (
         <div>
           {/* The navbar will show these links before you log in */}
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
+          <Link className='navtags nav-item' to="/login">Login</Link>
+          <Link className='navtags nav-item' to="/signup">Sign Up</Link>
         </div>
       )}
     </nav>

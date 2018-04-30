@@ -26,7 +26,7 @@ export const createTask = (information) =>  async (dispatch) => {
         const res = await axios.post('/api/tasks', information)
         dispatch(setTasks(res.data))
         await dispatch(me())
-        await dispatch(getYourFamily())
+        // await dispatch(getYourFamily())
     } catch (err) {
         console.error(err)
     }

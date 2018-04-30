@@ -10,7 +10,7 @@ export  class Block extends Component  {
         return (
             <div onClick={() => {setViewTo(member)}} className='row block'>
                 <div className='col-md-4'>
-                    <img className='little-pic' src='https://i.imgur.com/9d7Q908.jpg'/>
+                    <img className='little-pic' src='https://www.weact.org/wp-content/uploads/2016/10/Blank-profile.png'/>
                 </div>
                 <div className='col-md-8'>
                     <h6>{member.email}</h6>
@@ -38,17 +38,10 @@ export class YourBlock extends Component  {
             <div onClick={() => {setViewTo(main)}}  className='row your-block'>
                 <div className='col-md-12'>
                     <div className='row'>
-                        <img className='big-pic' src='https://i.imgur.com/9d7Q908.jpg'/>
+                        <img className='big-pic' src='https://www.weact.org/wp-content/uploads/2016/10/Blank-profile.png'/>
                     </div>  
                     <div className='row'>
-                        <h5>{main.email}</h5>
-                        <br/>
-                    </div>
-                    <div onClick={this.switch}className='row add-member-div'>
-                        <h4 className='center-text'>Add a member to your family</h4>
-                    </div>
-                    <div className={`row ${this.state.hide ? 'hide-this' : 'show-this'}`}>
-                        <AddMemberForm handleAddition={handleAddition}/>
+                        <h4 className='your-block-name'>{main.firstName} {main.lastName}</h4>
                     </div>
                 </div>
             </div>

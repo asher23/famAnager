@@ -1,3 +1,12 @@
 .member-form {
+    margin-top: 10px;
     margin-bottom: 10px;
+    width: 30%;
+}
+
+
+.add-member-form {
+    text-align: left;  
+    display: block;  
+    width: 100%;
 }

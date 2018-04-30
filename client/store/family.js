@@ -32,15 +32,6 @@ export const createFamily =  (familyName, inviteEmail, admin) => async (dispatch
     }
 }
 
-export const inviteToFamily =  (emailList) => async (dispatch, getState) => {
-    try {
-        for (var i = 0; i < emailList.length; i ++) {
-            const res = await axios.post('/auth/email/sendInvite', {from: getState().user.email, to: emailList[i], family: getState().family.name, familyId: getState().family.id})            
-        }
-    } catch (err) {
-        console.error(err)
-    }
-}
 
 
 export const getYourFamily = () => (dispatch) => {
@@ -54,6 +45,7 @@ export const getYourFamily = () => (dispatch) => {
 export const joinFamily = (familyName, userId) => (dispatch) => {
     axios.put('/api/families/add', {familyName, userId})
     .then((res) => {
+
         dispatch(setFamily(res.data))
         dispatch(me())
     })

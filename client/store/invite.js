@@ -15,7 +15,7 @@ const defaultInvite= {}
 /**
  * ACTION CREATORS
  */
-const setInvite= invite => ({type: SET_INVITE, invite})
+export const setInvite= invite => ({type: SET_INVITE, invite})
 
 /**
  * THUNK CREATORS 1106CAFE
@@ -38,6 +38,19 @@ export const acceptOrDecline = (inviteCode, response) => async (dispatch) => {
         console.error(err)
     }
 }
+
+export const inviteToFamily =  (email) => async (dispatch, getState) => {
+    try {
+        const res = await axios.post('/auth/email/sendInvite', {from: getState().user.email, to: email, family: getState().family.name, familyId: getState().family.id})            
+        if (res.data === 'success!') {
+            dispatch(setInvite('sent!!!'))
+        }
+    } catch (err) {
+        dispatch(setInvite(err))
+        console.error(err)
+    }
+}
+
 
 
 /**

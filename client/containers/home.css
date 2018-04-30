@@ -1,6 +1,7 @@
 .home {
-    background-image: url('https://images.unsplash.com/photo-1510070009289-b5bc34383727?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c1afc832add43ca17b634e2f15ff0ab9&auto=format&fit=crop&w=500&q=60');
-    height: calc(100vh - 50px) ;
+    /* background-image: url('https://images.unsplash.com/photo-1510070009289-b5bc34383727?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c1afc832add43ca17b634e2f15ff0ab9&auto=format&fit=crop&w=500&q=60'); */
+    height: 100vh;
+    background-color: #EDC7B7;
     background-size: cover;
     padding: 80px;
     text-align: center

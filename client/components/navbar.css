@@ -1,5 +1,14 @@
 .navbar-non {
     height: 50px;
-    background-color: black;
+    background-color: #AC3B61;
     color: white;
 }
+
+.navtags {
+    color: white;
+    text-decoration: none; /* no underline */
+  }
+
+  .zee {
+      z-index: 1;
+  }

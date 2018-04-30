@@ -7,7 +7,7 @@ import './style.css'
 const App = () => {
   return (
     <div className='everything'>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes />
     </div>
   )

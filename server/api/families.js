@@ -4,16 +4,12 @@ module.exports = router
 
 router.get('/', (req, res, next) => {
   Family.findAll({
-    // explicitly select only the id and email fields - even though
-    // users' passwords are encrypted, it won't help if we just
-    // send everything to anyone who asks!
   })
     .then(users => res.json(users))
     .catch(next)
 })
 
 router.get('/mine', async (req, res, next) => {
-    console.log(' u should be called rn');
     try {
         const user = await User.findById(req.session.passport.user)
         const family = await Family.findOne({
@@ -39,7 +35,9 @@ router.post('/', async (req,res,next) => {
             name: familyName
         })
         const user = await User.findOne({
-            id: userId
+            where: {
+                id: userId
+            }
         })
         family.addUser(userId)
         user.update({role: 'adult'})

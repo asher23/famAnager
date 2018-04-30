@@ -10,10 +10,10 @@ router.post('/', async (req,res,next) => {
             description,
             payment,
             assignee,
-            userId,
-            familyId,
-            dueDate
+            dueDate,
+            familyId
         })
+        task.addUser(userId)
         const tasks = await Task.findAll({
             where: {
                 id: familyId
@@ -30,7 +30,8 @@ router.post('/', async (req,res,next) => {
 router.get('/', async (req, res, enxt) => {
     try {
         const user = await User.findById(req.session.passport.user)
-        // console.log('user from apssport', user) 
+        const tasks = await user.getTasks();
+        res.json(tasks)
     } catch (error) {
         
     }

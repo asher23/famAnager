@@ -1,4 +1,5 @@
 import React, { Component} from 'react';
+import './newTaskForm.css'
 
 export default class NewTaskForm extends Component {
     constructor(props) {
@@ -15,7 +16,6 @@ export default class NewTaskForm extends Component {
             familyId: this.props.family.id,
             userId: this.props.user.id
         }
-        console.log('task', task)
         this.props.createTask(task)
     }
 
@@ -24,7 +24,7 @@ export default class NewTaskForm extends Component {
         const { users} = family
         if (!users) return null;
         return (
-            <form className='form-inline' onSubmit={this.handleSubmit}>
+            <form className='form-drop' onSubmit={this.handleSubmit}>
                     <label>Description</label>
                     <input required className='form-control' name="description" type="text" />
                 <div className='form-group'>

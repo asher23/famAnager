@@ -1,7 +1,8 @@
 .block {
     height: 140px;
     /* width: 100%; */
-    border: 3px solid white;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;    
     padding-top: 20px;
 }
 
@@ -10,6 +11,7 @@
     border-radius: 50%;
     width: 100px;
     height: 100px;
+    border: 1px solid black;
 }
 
 .block-list {
@@ -17,9 +19,12 @@
 }
 
 .your-block {
-    background-color: green;
+    background-color: #fbe8a6;
+    color: black;
     /* height: 300px; */
     padding-top: 25px;
+    border-top: 4px solid black;
+    border-bottom: 2px solid black
 }
 
 .big-pic {
@@ -27,8 +32,12 @@
     width: 220px;
     height: 220px;
     margin: auto;
+    border: 1px solid black;    
 }
 
+.your-block-name {
+    margin: 12px auto;
+}
 .add-member-div {
     height: 50px;
     background-color: black;

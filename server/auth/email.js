@@ -40,9 +40,9 @@ router.post('/sendInvite', async(req, res, next) => {
         const invitation = await Invitation.create({uniqueLink: random, from, to, family, familyId})
         tranporter.sendMail(helperOptions, (error, info) => {
             if (error) {
-                res.send('itwas not succeesffl' + error) 
+                res.send('there was an error' + error) 
             } else {
-                res.json(' it wa ssccessful')
+                res.json('success!')
             }
         })
     } catch (err) {
