@@ -13,7 +13,7 @@ class FamilyHome extends Component {
             member: this.props.user,
             view: 'main',
             openForm: false,
-            openList: false
+            openList: true
         }
     }
 
@@ -43,7 +43,7 @@ class FamilyHome extends Component {
 
                     <div className='col-md-10'>
                         <div className='family-home-task-form'>
-                            <div className='task-form-description' onClick={() => this.setState({openForm: !this.state.openForm})}>
+                            <div className='task-description' onClick={() => this.setState({openForm: !this.state.openForm})}>
                                 <h5>Create a task or a chore for family members to do</h5><br/>
                             </div>
                             <div className={`${this.state.openForm ? 'show-task-form' : 'hide-task-form' } `}>
@@ -51,7 +51,7 @@ class FamilyHome extends Component {
                             </div>
                         </div>
                         <div className='task-list'>
-                            <div className='task-form-description' onClick={() => this.setState({open: !this.state.openList})}>
+                            <div className='task-description' onClick={() => this.setState({openList: !this.state.openList})}>
                                 <h5>View all your tasks</h5><br/>
                             </div>
                             <div className={`${this.state.openList ? 'show-task-form' : 'hide-task-form' } `}>
@@ -101,6 +101,7 @@ class FamilyHome extends Component {
 const mapState = (state) => ({
     family: state.family,
     user: state.user,
+    tasks: state.tasks
 
 })
 
